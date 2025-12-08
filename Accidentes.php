@@ -20,7 +20,7 @@ if (!$resultado) {
 die("Error en la consulta SQL: " . $conexion->error);
 }
 ?>
-<h1>Accidentes en Motocicleta</h1>
+<h1>Accidentes en Motocicletas</h1>
 <?php
 if ($resultado->num_rows > 0) {
 echo "<table>";
