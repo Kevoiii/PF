@@ -11,7 +11,7 @@
     <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="#">Mi Sitio</a>
+             <a class="navbar-brand" href="principal.html">Página principal</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,7 +33,8 @@
                     <input type="password" class="form-control" placeholder="Ingresa tu contraseña">
                 </div>
 
-                <button class="btn btn-primary w-100">Entrar</button>
+                <button class="btn btn-primary w-100">Entrar</button><br><br>
+                <button class="btn btn-primary w-100">Registro</button>
             </form>
         </div>
     </div>
