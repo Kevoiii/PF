@@ -1,7 +1,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Lista de Accidentes en Motocicletas</title>
+<title>Lista de Cascos para Motocicletas</title>
 </head>
 <body>
 <?php
@@ -14,36 +14,36 @@ if ($conexion->connect_error) {
 die("Error de conexión: " . $conexion->connect_error);
 }
 $conexion->set_charset("utf8");
-$sql = "SELECT id, fecha, lugar, descripcion, causa, lesionados, uso_casco, nivel_gravedad FROM accidentes";
+$sql = "SELECT id, marca, modelo, tipo, certificado, descripcion, pecio_aprox, fecha_registro FROM cascos";
 $resultado = $conexion->query($sql);
 if (!$resultado) {
 die("Error en la consulta SQL: " . $conexion->error);
 }
 ?>
-<h1>Accidentes en Motocicletas</h1>
+<h1>CASCOS CON NORMATIVAS</h1>
 <?php
 if ($resultado->num_rows > 0) {
 echo "<table>";
 echo "<tr>";
 echo "<th>id</th>";
-echo "<th>fecha</th>";
-echo "<th>lugar</th>";
+echo "<th>marca</th>";
+echo "<th>modelo</th>";
+echo "<th>tipo</th>";
+echo "<th>certificado</th>";
 echo "<th>descripcion</th>";
-echo "<th>causa</th>";
-echo "<th>lesionados</th>";
-echo "<th>uso_casco</th>";
-echo "<th>nivel_gravedad</th>";
+echo "<th>pecio_aprox</th>";
+echo "<th>fecha_registro</th>";
 echo "</tr>";
 while($fila = $resultado->fetch_assoc()) {
 echo "<tr>";
 echo "<td>" . $fila["id"] . "</td>";
-echo "<td>" . $fila["fecha"] . "</td>";
-echo "<td>" . $fila["lugar"] . "</td>";
+echo "<td>" . $fila["marca"] . "</td>";
+echo "<td>" . $fila["modelo"] . "</td>";
+echo "<td>" . $fila["tipo"] . "</td>";
+echo "<td>" . $fila["certificado"] . "</td>";
 echo "<td>" . $fila["descripcion"] . "</td>";
-echo "<td>" . $fila["causa"] . "</td>";
-echo "<td>" . $fila["lesionados"] . "</td>";
-echo "<td>" . $fila["uso_casco"] . "</td>";
-echo "<td>" . $fila["nivel_gravedad"] . "</td>";
+echo "<td>" . $fila["pecio_aprox"] . "</td>";
+echo "<td>" . $fila["fecha_registro"] . "</td>";
 echo "</tr>";
 }
 echo "</table>";
