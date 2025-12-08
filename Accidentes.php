@@ -1,7 +1,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Lista de Accidentes en Motocicleta</title>
+<title>Lista de Accidentes en Motocicletas</title>
 </head>
 <body>
 <?php
