@@ -1,7 +1,9 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+
 <title>Lista de Cascos para Motocicletas</title>
+
 </head>
 <body>
 <?php
@@ -14,13 +16,16 @@ if ($conexion->connect_error) {
 die("Error de conexión: " . $conexion->connect_error);
 }
 $conexion->set_charset("utf8");
-$sql = "SELECT id, marca, modelo, tipo, certificado, descripcion, pecio_aprox, fecha_registro FROM cascos";
+$sql = "SELECT id, marca, modelo, tipo, certificado, descripcion, pecio_aprox, fecha_registro, imagen FROM cascos";
 $resultado = $conexion->query($sql);
 if (!$resultado) {
 die("Error en la consulta SQL: " . $conexion->error);
 }
 ?>
-<h1>CASCOS CON NORMATIVAS</h1>
+<center>
+    
+<h1>CASCOS CON NORMATIVAS</h1><br>
+</center>
 <?php
 if ($resultado->num_rows > 0) {
 echo "<table>";
@@ -33,6 +38,7 @@ echo "<th>certificado</th>";
 echo "<th>descripcion</th>";
 echo "<th>pecio_aprox</th>";
 echo "<th>fecha_registro</th>";
+echo "<th>imagen</th>";
 echo "</tr>";
 while($fila = $resultado->fetch_assoc()) {
 echo "<tr>";
@@ -44,6 +50,7 @@ echo "<td>" . $fila["certificado"] . "</td>";
 echo "<td>" . $fila["descripcion"] . "</td>";
 echo "<td>" . $fila["pecio_aprox"] . "</td>";
 echo "<td>" . $fila["fecha_registro"] . "</td>";
+echo "<td><img src='".$fila["imagen"] ."'width='100'></td>";
 echo "</tr>";
 }
 echo "</table>";
