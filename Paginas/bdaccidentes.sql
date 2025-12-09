@@ -7,3 +7,4 @@ update cascos set imagen ='Paginas/img/casco7.webp' where id = 7;
 update cascos set imagen ='Paginas/img/casco8.jpg' where id = 8;
 update cascos set imagen ='Paginas/img/casco9.webp' where id = 9;
 update cascos set imagen ='Paginas/img/casco10.jpg' where id = 10;
+
