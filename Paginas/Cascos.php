@@ -4,6 +4,19 @@
 <title>Lista de Cascos para Motocicletas</title>
 </head>
 <body>
+<div style="white-space: nowrap; overflow-x;">
+        <nav style="display: inline-block;">
+            <a href="principal.html">Inicio</a> |
+            <a href="Vista_2.html">Prácticas Seguras de Conducción</a> |
+            <a href="Cascos.php">Tipos de Cascos</a> |
+            <a href="Normativa.html">Normativa y Reglamento Vial</a> |
+            <a href="Accidentes.php">Accidentes en Motocicleta</a> |
+            <a href="--">Preguntas Frecuentes</a> |
+            <a href="">Contacto</a> |
+            <a href="loginp.php">Login</a> |
+            <a href="">Registro de Usuarios</a>
+        </nav>
+    </div>
 <?php
 $host = "localhost";
 $usuario_db = "root";
@@ -20,11 +33,12 @@ if (!$resultado) {
 die("Error en la consulta SQL: " . $conexion->error);
 }
 ?>
-<h1>CASCOS CON NORMATIVAS</h1>
+<h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">CASCOS CON NORMATIVA</h1>
+<body style="background-color: beige;">
 <?php
 if ($resultado->num_rows > 0) {
 echo "<table>";
-echo "<tr>";
+echo "<table border='1'>";
 echo "<th>id</th>";
 echo "<th>marca</th>";
 echo "<th>modelo</th>";
