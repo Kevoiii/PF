@@ -4,40 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RINOS EN MOVIMIENTO: RESPONSABILIDAD SOBRE RUEDAS</title>
+
+    <style>
+        body {
+            background-color: #800020;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* BANNER */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 350px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* TÍTULO SOBRE EL BANNER */
+        .banner-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            text-align: center;
+            color: white;
+            text-shadow: 3px 3px 10px black;
+        }
+
+        .banner-title h1 {
+            margin: 0;
+            font-size: 55px;
+            font-weight: bold;
+        }
+
+        .banner-title h2 {
+            margin: 5px 0 0;
+            font-size: 28px;
+            font-weight: 300;
+        }
+
+        .banner-cbtis {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: rgb(236, 228, 228);
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px black;
+        }
+
+        /* MENÚ */
+        nav {
+            background-color: #5b1a2e;
+            display: flex;
+            padding: 10px 30px;
+            align-items: center;
+            gap: 30px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+
+        nav a {
+            color: rgb(238, 232, 232);
+            text-decoration: none;
+            padding: 6px 8px;
+            transition: 0.3s;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            background-color: #7d2b44;
+            color: #fff9f9;
+        }
+
+        /* CONTENIDO */
+        .contenido {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
-<body style="background-color: rgba(254, 254, 254, 0.981);">
 
-    <center>
-    <header>
-        <h1 style="font-size: 45px; margin-bottom: 0;">RINOS EN MOVIMIENTO</h1>
-        <h2 style="font-size: 28px; margin-top: 5px;">Responsabilidad Sobre Ruedas</h2>
-    </header>
-    </center>
-    
-    <img src="img/ChatGPT Image Dec 5, 2025, 08_36_09 AM.png" alt="Banner del proyecto" width="100%" height="350">
+<body>
 
-    <hr>
+    <!-- BANNER COMPLETO -->
+    <div class="banner">
+        <img src="img/ChatGPT Image Dec 5, 2025, 08_36_09 AM.png" alt="Banner del proyecto">
 
-    <div style="white-space: nowrap; overflow-x: auto; border: 1px solid #ccc; padding: 10px; background-color: black;">
-        <nav style="display: inline-block; color: aliceblue;">
-            <a style="color: aliceblue;" href="principal.html">Inicio</a> |
-            <a style="color: aliceblue;" href="practicas.html">Prácticas Seguras de Conducción</a> |
-            <a style="color: aliceblue;" href="Cascos.php">Tipos de Cascos</a> |
-            <a style="color: aliceblue;" href="Normativa.html">Normativa y Reglamento Vial</a> |
-            <a style="color: aliceblue;" href="Accidentes.php">Accidentes en Motocicleta</a> |
-            <a style="color: aliceblue;" href="faq.html">Preguntas Frecuentes</a> |
-            <a style="color: aliceblue;" href="contacto.html">Contacto</a> |
-            <a style="color: aliceblue;" href="loginp.php">Login</a> |
-            <a style="color: aliceblue;" href="registrousuarios.html">Registro de Usuarios</a>
-        </nav>
+        <!-- CBTIS TEXTO EN LA ESQUINA -->
+        <div class="banner-cbtis">CBTis 217</div>
+
+        <!-- TÍTULO CENTRADO SOBRE EL BANNER -->
+        <div class="banner-title">
+            <h1>RINOS EN MOVIMIENTO</h1>
+            <h2>Responsabilidad Sobre Ruedas</h2>
+        </div>
     </div>
 
-    <hr>
+    <hr style="border-color:white;">
 
-    <section style="max-width: 900px; margin: auto; font-family: Arial, sans-serif; line-height: 1.6; background-color: beige;">
+    <!-- MENÚ -->
+    <nav>
+        <a href="principal.html">Inicio</a>
+        <a href="practicas.html">Prácticas Seguras de Conducción</a>
+        <a href="Cascos.php">Tipos de Cascos</a>
+        <a href="Normativa.html">Normativa y Reglamento Vial</a>
+        <a href="Accidentes.php">Accidentes en Motocicleta</a>
+        <a href="faq.html">Preguntas Frecuentes</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="loginp.php">Login</a>
+        <a href="registrousuarios.html">Registro de Usuarios</a>
+    </nav>
 
-        <h2 style="text-align: center; font-size: 28px; margin-bottom: 10px;">Presentación</h2>
-        <p style="font-size: 17px; text-align: justify;">
+    <hr style="border-color:white;">
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <section class="contenido">
+
+        <h2 style="text-align: center; font-size: 28px; margin-bottom: 10px; color:black;">Presentación</h2>
+        <p style="font-size: 17px; text-align: justify; color:black;">
             Somos el equipo conformado por <strong>Diego Javier Fuentes Pérez</strong>, 
             <strong>José Miguel Camarena Ramírez</strong>, 
             <strong>Kevin Daniel Pérez Vázquez</strong>, 
@@ -46,16 +144,16 @@
             Unimos esfuerzos, ideas y habilidades para desarrollar este proyecto con compromiso y creatividad.
         </p>
 
-        <h2 style="text-align: center; font-size: 28px; margin-top: 25px;">Mensaje Principal</h2>
-        <p style="font-size: 17px; text-align: justify;">
+        <h2 style="text-align: center; font-size: 28px; margin-top: 25px; color:black;">Mensaje Principal</h2>
+        <p style="font-size: 17px; text-align: justify; color:black;">
             Este proyecto está creado para promover la conducción segura, 
             el uso adecuado del equipo de protección y la normativa vial. 
             Nuestro objetivo es brindar información clara y útil que contribuya a una conducción responsable
             y a la prevención de accidentes.
         </p>
 
-        <h2 style="text-align: center; font-size: 28px; margin-top: 25px;">Objetivo</h2>
-        <p style="font-size: 17px; text-align: justify;">
+        <h2 style="text-align: center; font-size: 28px; margin-top: 25px; color:black;">Objetivo</h2>
+        <p style="font-size: 17px; text-align: justify; color:black;">
             Fomentar el conocimiento y la conciencia vial mediante recursos informativos, 
             ejemplos prácticos y recomendaciones accesibles, 
             contribuyendo así a una mejor seguridad al conducir motocicleta.
