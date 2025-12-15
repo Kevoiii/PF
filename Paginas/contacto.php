@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Contacto y Compromiso</title>
-
-    <style>
+ <style>
         body {
             background-color: #ffffff;
             font-family: Arial, sans-serif;
@@ -39,20 +33,19 @@
         nav {
             background-color: #5b1a2e;
             display: flex;
-            padding: 10px 15px;
+            padding: 10px 30px;
             align-items: center;
-            justify-content: center;
-            gap: 18px;
+            gap: 30px;
             font-weight: 600;
         }
 
         nav a {
             color: rgb(238, 232, 232);
             text-decoration: none;
-            padding: 5px 10px;
+            padding: 6px 8px;
             transition: background-color 0.3s ease, color 0.3s ease;
             border-radius: 4px;
-            font-size: 14px;
+            font-size: 16px;
         }
 
         nav a:hover {
@@ -60,77 +53,21 @@
             color: #fff9f9;
         }
 
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 20px 10px;
-        }
-
-        .container {
+        .contenido {
             max-width: 800px;
             margin: 20px auto;
-            padding: 0 15px;
-        }
-
-        .card {
             background-color: white;
+            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
-            overflow: hidden;
         }
 
-        .card-header {
-            padding: 12px 15px;
+        p.center {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
         }
 
-        .card-body {
-            padding: 15px;
-        }
-
-        .card-header.bg-primary {
-            background-color: #5b1a2e;
-            color: white;
-        }
-
-        .card-header.bg-success {
-            background-color: #5b1a2e; /* Cambiado a vino */
-            color: white;
-        }
-
-        .card-body ul {
-            margin: 10px 0;
-            padding-left: 20px;
-        }
-
-        .card-body ul li {
-            margin-bottom: 6px;
-        }
-
-        .btn {
-            padding: 6px 12px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            color: white;
-            font-size: 14px;
-        }
-
-        .btn-primary { 
-            background-color: #5b1a2e; 
-        }
-        .btn-primary:hover { 
-            background-color: #7d2b44; 
-        }
-
-        .btn-success { 
-            background-color: #5b1a2e; /* Cambiado a vino */
-        }
-        .btn-success:hover { 
-            background-color: #7d2b44; 
-        }
-
+        
         footer {
             background-color: #5b1a2e;
             color: white;
@@ -173,16 +110,16 @@
         .footer-links a:hover {
             color: #d6c9b8;
         }
-
     </style>
-
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p1+YzZ8mQOzUp+ElWqXAHZrLhv05H2XhvEz8n+qz9KXLv9yEO4bw3xn+ICy3TlaIW4Z31NeTIB4YfYuCzo/ujg=="
       crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 </head>
-
 <body>
 
     <div class="banner">
@@ -192,43 +129,44 @@
 
     <nav>
         <a href="principal.html">Inicio</a>
-        <a href="practicas.html">Prácticas Seguras</a>
+        <a href="practicas.html">Prácticas Seguras de Conducción</a>
         <a href="Cascos.php">Tipos de Cascos</a>
-        <a href="Normativa.html">Normativa</a>
-        <a href="Accidentes.php">Accidentes</a>
-        <a href="faq.html">Preguntas</a>
+        <a href="Normativa.html">Normativa y Reglamento Vial</a>
+        <a href="Accidentes.php">Accidentes en Motocicleta</a>
+        <a href="faq.html">Preguntas Frecuentes</a>
         <a href="contacto.html">Contacto</a>
         <a href="loginp.php">Login</a>
-        <a href="registrousuarios.php">Registro</a>
+        <a href="registrousuarios.php">Registro de Usuarios</a>
     </nav>
 
     <hr>
 
-    <header>
+    <header class="bg-dark text-white text-center p-4">
         <h1>Contacto y Compromiso de Conducción Segura</h1>
         <p>Firma tu promesa de conducir de forma responsable</p>
     </header>
 
-    <div class="container">
+    <div class="container mt-4">
 
-        <div class="card">
-            <div class="card-header bg-primary">
-                <h3>Formulario de Contacto</h3>
+        <div class="card mb-5 shadow">
+            <div class="card-header bg-primary text-white">
+                <h3 class="mb-0">Formulario de Contacto</h3>
             </div>
+
             <div class="card-body">
                 <form>
                     <div class="mb-3">
-                        <label for="nombre">Nombre completo</label>
+                        <label for="nombre" class="form-label">Nombre completo</label>
                         <input type="text" class="form-control" id="nombre" placeholder="Escribe tu nombre">
                     </div>
 
                     <div class="mb-3">
-                        <label for="correo">Correo electrónico</label>
+                        <label for="correo" class="form-label">Correo electrónico</label>
                         <input type="email" class="form-control" id="correo" placeholder="ejemplo@gmail.com">
                     </div>
 
                     <div class="mb-3">
-                        <label for="mensaje">Mensaje</label>
+                        <label for="mensaje" class="form-label">Mensaje</label>
                         <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje o duda"></textarea>
                     </div>
 
@@ -237,10 +175,11 @@
             </div>
         </div>
 
-        <div class="card">
-            <div class="card-header bg-success">
-                <h3>Compromiso de Conducción Segura</h3>
+        <div class="card shadow">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">Compromiso de Conducción Segura</h3>
             </div>
+
             <div class="card-body">
                 <p>
                     Al firmar este compromiso, aceptas ser un motociclista responsable,
@@ -257,7 +196,7 @@
 
                 <form>
                     <div class="mb-3">
-                        <label for="nombreCompromiso">Tu nombre</label>
+                        <label for="nombreCompromiso" class="form-label">Tu nombre</label>
                         <input type="text" class="form-control" id="nombreCompromiso" placeholder="Escribe tu nombre para firmar">
                     </div>
 
@@ -265,24 +204,7 @@
                 </form>
             </div>
         </div>
-
-    </div>   
-
-    <footer>
-        <div class="footer-logo">
-            <img src="img/cb.jfif" alt="SEP Logo">
-        </div>
-        <div class="footer-contact">
-            <p><i class="fas fa-home"></i>Av. Tecnológico s/n<br>Loma Linda, Uriangato, Gto</p>
-            <p><i class="fas fa-phone"></i>+52-445-458-0516</p>
-            <p><i class="fas fa-phone"></i>+52-445-458-4291</p>
-        </div>
-        <div class="footer-links">
-            <p>Enlaces que pueden interesarte:</p>
-            <strong>SÍGUENOS</strong>
-            <a href="https://www.facebook.com/cbtis217Oficial/?locale=es_LA" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
-        </div>
-    </footer>
+    </div>
 
 </body>
 </html>
