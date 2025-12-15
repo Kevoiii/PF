@@ -142,12 +142,12 @@
 
     <nav>
         <a href="principal.html">Inicio</a>
-        <a href="practicas.html">Prácticas Seguras</a>
+        <a href="practicas.php">Prácticas Seguras</a>
         <a href="Cascos.php">Tipos de Cascos</a>
-        <a href="Normativa.html">Normativa Vial</a>
+        <a href="Normativa.php">Normativa Vial</a>
         <a href="Accidentes.php">Accidentes</a>
-        <a href="faq.html">FAQ</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="faq.php">FAQ</a>
+        <a href="contacto.php">Contacto</a>
         <a href="loginp.php">Login</a>
         <a href="registrousuarios.php">Registro</a>
     </nav>

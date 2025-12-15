@@ -132,13 +132,13 @@
     </div>
 
     <nav>
-        <a href="principal.html">Inicio</a>
-        <a href="practicas.html">Prácticas Seguras de Conducción</a>
+        <a href="principal.php">Inicio</a>
+        <a href="practicas.php">Prácticas Seguras de Conducción</a>
         <a href="Cascos.php">Tipos de Cascos</a>
-        <a href="Normativa.html">Normativa y Reglamento Vial</a>
+        <a href="Normativa.php">Normativa y Reglamento Vial</a>
         <a href="Accidentes.php">Accidentes en Motocicleta</a>
-        <a href="faq.html">Preguntas Frecuentes</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="faq.php">Preguntas Frecuentes</a>
+        <a href="contacto.php">Contacto</a>
         <a href="loginp.php">Login</a>
         <a href="registrousuarios.php">Registro de Usuarios</a>
     </nav>

@@ -212,7 +212,7 @@
 
     <nav>
         <a href="accidentes2.php">Agregar Accidentes</a>
-        <a href="principal.html">Cerrar Sesión</a>
+        <a href="principal.php">Cerrar Sesión</a>
     </nav>
     <?php
 // --- BLOQUE PHP PARA MANEJAR LA INSERCIÓN DE DATOS ---
