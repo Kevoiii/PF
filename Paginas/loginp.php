@@ -1,36 +1,45 @@
- <?php
-        $servername = "localhost";
-        $username_db = "root";  
-        $password_db = "";        
-        $dbname = "bdproyect";      
-        $pagina_destino = "cascos2.php";
-        $mensaje_resultado = "";
+<?php
+$servername = "localhost";
+$username_db = "root";
+$password_db = "";
+$dbname = "bdproyect";
+$pagina_destino = "cascos2.php";
+$mensaje_resultado = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario_ingresado = $_POST['username'];
     $clave_ingresada = $_POST['pass'];
     $conn = new mysqli($servername, $username_db, $password_db, $dbname);
+    
     if ($conn->connect_error) {
         $mensaje_resultado = "Error de conexión a la DB: " . $conn->connect_error;
     } else {
+        // La consulta sigue usando sentencias preparadas, lo cual es correcto.
         $sql = "SELECT pass FROM login WHERE username = ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $usuario_ingresado);
         $stmt->execute();
         $result = $stmt->get_result();
+        
         if ($result->num_rows === 1) {
             $row = $result->fetch_assoc();
-            $clave_db = $row['pass'];
+            $clave_db = $row['pass']; // Clave obtenida de la DB (asumimos que está en texto plano o el hash, pero se compara directamente)
+            
             if ($clave_ingresada == $clave_db) {
+                // Inicio de sesión exitoso
+                // Se recomienda iniciar sesión de PHP aquí si se usan sesiones
                 ob_clean();
                 header("Location: $pagina_destino");
                 exit();
             } else {
-                $mensaje_resultado = "<p style='color: red;'>❌ Contraseña incorrecta.</p>";
+                // Contraseña incorrecta
+                $mensaje_resultado = "<p style='color: red; font-weight: bold;'>❌ Contraseña incorrecta.</p>";
             }
         } else {
-            $mensaje_resultado = "<p style='color: red;'>❌ Usuario NO encontrado.</p>";
+            // Usuario NO encontrado
+            $mensaje_resultado = "<p style='color: red; font-weight: bold;'>❌ Usuario NO encontrado.</p>";
         }
+        
         $stmt->close();
         $conn->close();
     }
@@ -60,7 +69,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             padding: 0;
         }
 
-        /* Estilos del Banner */
         .banner {
             position: relative;
             width: 100%;
@@ -84,34 +92,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             text-shadow: 2px 2px 8px black;
         }
 
-        /* Estilos de la Barra de Navegación */
         nav {
-            background-color: #5b1a2e; /* Color de fondo vino/borgoña */
-            display: flex;             /* Usa Flexbox para alinear elementos horizontalmente */
-            padding: 10px 30px;        /* Espaciado interno superior/inferior y a los lados */
-            align-items: center;       /* Centra verticalmente los elementos */
-            gap: 30px;                 /* Espacio entre los enlaces */
-            font-weight: 600;          /* Grosor de la fuente */
+            background-color: #5b1a2e;
+            display: flex;
+            padding: 10px 30px;
+            align-items: center;
+            gap: 30px;
+            font-weight: 600;
         }
 
         nav a {
-            color: rgb(238, 232, 232); /* Color del texto (casi blanco) */
-            text-decoration: none;     /* Quita el subrayado de los enlaces */
-            padding: 6px 8px;          /* Espaciado interno para hacer clic más fácil */
-            transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para el hover */
-            border-radius: 4px;        /* Esquinas ligeramente redondeadas */
+            color: rgb(238, 232, 232);
+            text-decoration: none;
+            padding: 6px 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 4px;
             font-size: 16px;
         }
 
         nav a:hover {
-            background-color: #7d2b44; /* Fondo más oscuro al pasar el ratón */
-            color: #fff9f9;            /* Texto más blanco/claro */
+            background-color: #7d2b44;
+            color: #fff9f9;
         }
         
-        /* Estilos del Contenido Principal (donde irá el formulario de Login) */
         .contenido {
-            max-width: 400px; /* Reducido para un formulario */
-            margin: 50px auto; /* Centrado y con margen superior */
+            max-width: 400px;
+            margin: 50px auto;
             background-color: white;
             padding: 30px;
             border-radius: 8px;
@@ -119,7 +125,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             text-align: center;
         }
 
-        /* Estilos específicos para el formulario de Login */
         .contenido h2 {
             color: #5b1a2e;
             margin-bottom: 20px;
@@ -142,7 +147,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box; /* Asegura que padding no afecte el ancho total */
+            box-sizing: border-box;
         }
 
         .btn-login {
@@ -162,7 +167,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background-color: #7d2b44;
         }
 
-        /* Estilos del Footer */
         footer {
             background-color: #5b1a2e;
             color: white;
@@ -172,7 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             padding: 30px 20px;
             flex-wrap: wrap;
             gap: 30px;
-            margin-top: 50px; /* Separación del contenido principal */
+            margin-top: 50px;
         }
 
         .footer-logo img {
@@ -231,7 +235,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="contenido">
         <h2>Iniciar Sesión</h2>
         
-       
+        <?php echo $mensaje_resultado; ?>
 
         <form action="loginp.php" method="POST">
             <div class="form-group">
