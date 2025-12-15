@@ -16,7 +16,7 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Current Database: `bdproyect`
+-- Current Database: `bdproyect`               s
 --
 
 CREATE DATABASE /*!32312 IF NOT EXISTS*/ `bdproyect` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
@@ -39,6 +39,7 @@ CREATE TABLE `accidentes` (
   `lesionados` int(11) DEFAULT NULL,
   `uso_casco` tinyint(1) DEFAULT NULL,
   `nivel_gravedad` varchar(30) DEFAULT NULL,
+`imagen` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -49,12 +50,12 @@ CREATE TABLE `accidentes` (
 
 LOCK TABLES `accidentes` WRITE;
 /*!40000 ALTER TABLE `accidentes` DISABLE KEYS */;
-INSERT INTO `accidentes` VALUES (1,'2025-01-15','Avenida Central, Esquina 5','Colisión trasera debido a la falta de distancia de seguridad del vehículo que seguía.','Colisión por alcance',1,1,'Leve'),(2,'2025-02-28','Carretera Federal 45, Km 20','Deslizamiento en curva cerrada por exceso de velocidad y pavimento mojado.','Exceso de velocidad',1,1,'Grave'),(3,'2025-03-10','Zona Industrial, Calle del Sol','El conductor de la motocicleta no respetó la señal de alto en un cruce.','Falta de precaución',0,1,'Bajo'),(4,'2025-04-05','Periférico Norte, Salida 3','Impacto lateral por cambio de carril sin señalizar de un camión.','Cambio de carril imprudente',2,0,'Fatal'),(5,'2025-05-18','Pueblo Viejo, Calle Principal','Caída de la motocicleta al intentar esquivar un animal doméstico que cruzaba la calle.','Obstáculo inesperado',1,1,'Moderado'),(6,'2025-06-22','Autopista Sur, Caseta de Peaje','Falla mecánica (neumático reventado) que causó la pérdida de control a alta velocidad.','Falla mecánica',1,1,'Grave'),(7,'2025-07-07','Bulevar de la Luz, Cerca de la Plaza','Peatón cruzó la vía repentinamente, provocando un frenado brusco y caída.','Imprudencia de peatón',1,1,'Leve'),(8,'2025-08-30','Calle Residencial, Sin Iluminación','Impacto con bache profundo no visible de noche, resultando en lesiones.','Mal estado de la vía',1,0,'Grave'),(9,'2025-09-12','Vía de Acceso Rápido','Choque frontal menor en tráfico lento, sin lesiones graves.','Distracción del conductor',0,1,'Bajo'),(10,'2025-10-25','Ruta Costera, Vista al Mar','Pérdida de adherencia por mancha de aceite en la carretera.','Condiciones adversas (Aceite)',1,1,'Moderado');
+INSERT INTO `accidentes` VALUES (1,'2025-01-15','Avenida Central, Esquina 5','Colisión trasera debido a la falta de distancia de seguridad del vehículo que seguía.','Colisión por alcance',1,1,'Leve','img/accidente1.jfif'),(2,'2025-02-28','Carretera Federal 45, Km 20','Deslizamiento en curva cerrada por exceso de velocidad y pavimento mojado.','Exceso de velocidad',1,1,'Grave','img/accidente2.jfif'),(3,'2025-03-10','Zona Industrial, Calle del Sol','El conductor de la motocicleta no respetó la señal de alto en un cruce.','Falta de precaución',0,1,'Bajo','img/accidente3.jpg'),(4,'2025-04-05','Periférico Norte, Salida 3','Impacto lateral por cambio de carril sin señalizar de un camión.','Cambio de carril imprudente',2,0,'Fatal','img/accidente4.jpg'),(5,'2025-05-18','Pueblo Viejo, Calle Principal','Caída de la motocicleta al intentar esquivar un animal doméstico que cruzaba la calle.','Obstáculo inesperado',1,1,'Moderado','img/accidente5.jpg'),(6,'2025-06-22','Autopista Sur, Caseta de Peaje','Falla mecánica (neumático reventado) que causó la pérdida de control a alta velocidad.','Falla mecánica',1,1,'Grave','img/accidente6.jfif'),(7,'2025-07-07','Bulevar de la Luz, Cerca de la Plaza','Peatón cruzó la vía repentinamente, provocando un frenado brusco y caída.','Imprudencia de peatón',1,1,'Leve','img/accidente7.jfif'),(8,'2025-08-30','Calle Residencial, Sin Iluminación','Impacto con bache profundo no visible de noche, resultando en lesiones.','Mal estado de la vía',1,0,'Grave','img/accidente8.jfif'),(9,'2025-09-12','Vía de Acceso Rápido','Choque frontal menor en tráfico lento, sin lesiones graves.','Distracción del conductor',0,1,'Bajo','img/accidnte9.jfif'),(10,'2025-10-25','Ruta Costera, Vista al Mar','Pérdida de adherencia por mancha de aceite en la carretera.','Condiciones adversas (Aceite)',1,1,'Moderado','img/accidente10.jfif');
 /*!40000 ALTER TABLE `accidentes` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `cascos`
+-- Table structure for table `cascos` 23
 --
 
 DROP TABLE IF EXISTS `cascos`;
