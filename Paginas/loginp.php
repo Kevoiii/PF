@@ -1,49 +1,194 @@
+<?php
+// -----------------------------------------------------------
+// 1. CONFIGURACIÓN INICIAL (DEBE SER LO PRIMERO)
+// -----------------------------------------------------------
+
+$servername = "localhost"; 
+$username = "root";     
+$password = "";       
+$dbname = "bdproyect"; 
+
+$mensaje_resultado = ""; 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    // Obtener los datos del formulario
+    $usuario = $_POST['usuario'];
+    $clave = $_POST['clave'];
+
+    // Conexión a la base de datos
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        $mensaje_resultado = "Error de conexión a la base de datos: " . $conn->connect_error;
+    } else {
+        
+      
+}
+}
+// El código continúa con el HTML...
+?>
+<center>
 <!DOCTYPE html>
-<html lang="es">
+<html>
+     <style>
+        body {
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 350px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: rgb(236, 228, 228);
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px black;
+        }
+
+        nav {
+            background-color: #5b1a2e;
+            display: flex;
+            padding: 10px 30px;
+            align-items: center;
+            gap: 30px;
+            font-weight: 600;
+        }
+
+        nav a {
+            color: rgb(238, 232, 232);
+            text-decoration: none;
+            padding: 6px 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            background-color: #7d2b44;
+            color: #fff9f9;
+        }
+
+        .contenido {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        p.center {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        
+        footer {
+            background-color: #5b1a2e;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 30px 20px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-logo img {
+            width: 120px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .footer-contact, .footer-links {
+            max-width: 300px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .footer-contact i, .footer-links i {
+            margin-right: 8px;
+        }
+
+        .footer-links strong {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            vertical-align: middle;
+        }
+
+        .footer-links a:hover {
+            color: #d6c9b8;
+        }
+    </style>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p1+YzZ8mQOzUp+ElWqXAHZrLhv05H2XhvEz8n+qz9KXLv9yEO4bw3xn+ICy3TlaIW4Z31NeTIB4YfYuCzo/ujg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantilla Login</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Verificación PHP Unificado</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .resultado { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+    </style>
 </head>
-<body class="bg-light">
-
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-             <a class="navbar-brand" href="principal.html">Página principal</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+<body>
+<nav>
+        <a href="principal.html">Inicio</a>
+        <a href="practicas.html">Prácticas Seguras de Conducción</a>
+        <a href="Cascos.php">Tipos de Cascos</a>
+        <a href="Normativa.html">Normativa y Reglamento Vial</a>
+        <a href="Accidentes.php">Accidentes en Motocicleta</a>
+        <a href="faq.html">Preguntas Frecuentes</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="loginp.php">Login</a>
+        <a href="registrousuarios.php">Registro de Usuarios</a>
     </nav>
+    <h2>Verificación de Usuario</h2>
+    
+    <?php 
+    // Si la variable $mensaje_resultado tiene contenido, lo mostramos aquí
+    if (!empty($mensaje_resultado)) {
+        echo "<div class='resultado'>" . $mensaje_resultado . "</div>";
+    }
+    ?>
+    
+    <form action="" method="POST"> 
+        <label for="usuario">Nombre de Usuario:</label><br>
+        <input type="text" id="usuario" name="usuario" required><br><br>
+        
+        <label for="clave">Contraseña:</label><br>
+        <input type="password" id="clave" name="clave" required><br><br>
+        
+        <input type="submit" value="Ingresar">
+    </form>
 
-    <!-- Contenedor principal -->
-    <div class="container d-flex justify-content-center align-items-center" style="height: 80vh;">
-        <div class="card shadow p-4" style="max-width: 400px; width: 100%;">
-            <h3 class="text-center mb-3">Iniciar sesión</h3>
-            <form>
-                <div class="mb-3">
-                    <label class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-control" placeholder="Ingresa tu correo">
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" placeholder="Ingresa tu contraseña">
-                </div>
-
-                <button class="btn btn-primary w-100">Entrar</button><br><br>
-                <button class="btn btn-primary w-100">Registro</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center p-3">
-        <p class="mb-0">© 2025 Mi Sitio Web - Todos los derechos reservados</p>
-    </footer>
-
-    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+</center>
