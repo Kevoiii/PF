@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Presentación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
 
     <style>
         body {
@@ -43,6 +44,7 @@
             align-items: center;
             gap: 30px;
             font-weight: 600;
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -60,17 +62,32 @@
         }
 
         .contenido {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 900px;
+            margin: 30px auto;
             background-color: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 30px;
+            border-radius: 10px;
         }
 
-        p.center {
-            text-align: center;
-            font-weight: bold;
-            margin-top: 20px;
+        .faq-item {
+            background-color: #f7f7f7;
+            border-left: 6px solid #5b1a2e;
+            padding: 18px 22px;
+            margin-bottom: 22px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        }
+
+        .faq-item h2 {
+            margin-top: 0;
+            color: #5b1a2e;
+            font-size: 20px;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+            color: #333;
+            font-size: 15px;
         }
 
         footer {
@@ -86,8 +103,6 @@
 
         .footer-logo img {
             width: 120px;
-            height: auto;
-            object-fit: contain;
         }
 
         .footer-contact, .footer-links {
@@ -96,20 +111,12 @@
             line-height: 1.5;
         }
 
-        .footer-contact i, .footer-links i {
-            margin-right: 8px;
-        }
-
-        .footer-links strong {
-            display: block;
-            margin-bottom: 10px;
-        }
-
         .footer-links a {
             color: white;
             text-decoration: none;
-            font-size: 22px;
-            vertical-align: middle;
+            font-size: 16px;
+            display: block;
+            margin-top: 5px;
         }
 
         .footer-links a:hover {
@@ -129,52 +136,80 @@
 <body>
 
     <div class="banner">
-        <img src="img/ChatGPT Image Dec 5, 2025, 08_36_09 AM.png" alt="Banner del proyecto">
-        <div class="banner-text">CBTis 217</div>
+        <img src="img/ChatGPT Image Dec 5, 2025, 08_36_09 AM.png" alt="Banner">
+        <div class="banner-text">Preguntas Frecuentes</div>
     </div>
 
     <nav>
         <a href="principal.html">Inicio</a>
-        <a href="practicas.html">Prácticas Seguras de Conducción</a>
+        <a href="practicas.html">Prácticas Seguras</a>
         <a href="Cascos.php">Tipos de Cascos</a>
-        <a href="Normativa.html">Normativa y Reglamento Vial</a>
-        <a href="Accidentes.php">Accidentes en Motocicleta</a>
-        <a href="faq.html">Preguntas Frecuentes</a>
+        <a href="Normativa.html">Normativa Vial</a>
+        <a href="Accidentes.php">Accidentes</a>
+        <a href="faq.html">FAQ</a>
         <a href="contacto.html">Contacto</a>
         <a href="loginp.php">Login</a>
-        <a href="registrousuarios.php">Registro de Usuarios</a>
+        <a href="registrousuarios.php">Registro</a>
     </nav>
 
     <hr>
 
-    <section style="max-width: 900px; margin: auto; font-family: Arial, sans-serif; line-height: 1.6; background-color: beige;">
+    <div class="contenido">
 
-        <h2 style="text-align: center; font-size: 28px; margin-bottom: 10px;">Presentación</h2>
-        <p style="font-size: 17px; text-align: justify;">
-            Somos el equipo conformado por <strong>Diego Javier Fuentes Pérez</strong>, 
-            <strong>José Miguel Camarena Ramírez</strong>, 
-            <strong>Kevin Daniel Pérez Vázquez</strong>, 
-            <strong>José Julián García Martínez</strong> y 
-            <strong>Kevin Gael López Moreno</strong>. 
-            Unimos esfuerzos, ideas y habilidades para desarrollar este proyecto con compromiso y creatividad.
-        </p>
+        <div class="faq-item">
+            <h2>1. ¿Es obligatorio usar casco?</h2>
+            <p>Sí, el uso del casco es obligatorio y reduce considerablemente el riesgo de lesiones graves.</p>
+        </div>
 
-        <h2 style="text-align: center; font-size: 28px; margin-top: 25px;">Mensaje Principal</h2>
-        <p style="font-size: 17px; text-align: justify;">
-            Este proyecto está creado para promover la conducción segura, 
-            el uso adecuado del equipo de protección y la normativa vial. 
-            Nuestro objetivo es brindar información clara y útil que contribuya a una conducción responsable
-            y a la prevención de accidentes.
-        </p>
+        <div class="faq-item">
+            <h2>2. ¿Qué tipo de casco es más seguro?</h2>
+            <p>El casco integral es el más seguro, ya que protege completamente la cabeza y el rostro.</p>
+        </div>
 
-        <h2 style="text-align: center; font-size: 28px; margin-top: 25px;">Objetivo</h2>
-        <p style="font-size: 17px; text-align: justify;">
-            Fomentar el conocimiento y la conciencia vial mediante recursos informativos, 
-            ejemplos prácticos y recomendaciones accesibles, 
-            contribuyendo así a una mejor seguridad al conducir motocicleta.
-        </p>
+        <div class="faq-item">
+            <h2>3. ¿Por qué ocurren tantos accidentes en motocicleta?</h2>
+            <p>Principalmente por exceso de velocidad, distracciones y falta de equipo de protección.</p>
+        </div>
 
-    </section>
+        <div class="faq-item">
+            <h2>4. ¿Es obligatorio usar equipo de protección?</h2>
+            <p>Guantes, chaqueta, botas y protecciones reducen lesiones y pueden salvar vidas.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>5. ¿Qué debo revisar antes de conducir?</h2>
+            <p>Frenos, luces, llantas, espejos y niveles de aceite.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>6. ¿Es peligroso conducir bajo la lluvia?</h2>
+            <p>Sí, el pavimento se vuelve resbaloso. Reduce la velocidad y mantén distancia.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>7. ¿Qué hacer en caso de accidente?</h2>
+            <p>Detente, revisa lesiones y llama a los servicios de emergencia.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>8. ¿Puedo llevar acompañante?</h2>
+            <p>Sí, siempre que la motocicleta esté diseñada para ello y ambos usen casco.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>9. ¿Conducir cansado es peligroso?</h2>
+            <p>Sí, disminuye la concentración y el tiempo de reacción.</p>
+        </div>
+
+        <div class="faq-item">
+            <h2>10. ¿Cada cuánto debo darle mantenimiento a mi moto?</h2>
+            <p>Depende del uso, pero se recomienda revisión periódica cada 3 a 6 meses.</p>
+        </div>
+
+        
+
+    </div>
+
     <footer>
         <div class="footer-logo">
             <img src="img/cb.jfif" alt="SEP Logo">
@@ -186,10 +221,11 @@
         </div>
         <div class="footer-links">
             <p>Enlaces que pueden interesarte:</p>
-            <strong>SÍGUENOS</strong> 
+            <strong>SÍGUENOS</strong>   
             <a href="https://www.facebook.com/cbtis217Oficial/?locale=es_LA" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
         </div>
     </footer>
+
 
 </body>
 </html>
