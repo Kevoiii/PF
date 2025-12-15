@@ -21,6 +21,7 @@
             max-width: 1200px;
         }
 
+        /* BANNER */
         .banner {
             position: relative;
             width: 100%;
@@ -44,6 +45,7 @@
             text-shadow: 2px 2px 8px black;
         }
 
+        /* NAV */
         nav {
             background-color: #5b1a2e;
             display: flex;
@@ -69,21 +71,60 @@
             color: #fff9f9;
         }
 
+        /* CONTENIDO */
         .container {
             max-width: 800px;
             margin: 30px auto;
+            background-color: beige;
+            padding: 30px;
+            border-radius: 8px;
         }
 
         ul {
             text-align: center;
             list-style-position: inside;
         }
+
+        /* FOOTER */
+        footer {
+            background-color: #5b1a2e;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 30px 20px;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .footer-logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .footer-contact,
+        .footer-links {
+            max-width: 300px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        .footer-links a:hover {
+            color: #d6c9b8;
+        }
     </style>
 
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-p1+YzZ8mQOzUp+ElWqXAHZrLhv05H2XhvEz8n+qz9KXLv9yEO4bw3xn+ICy3TlaIW4Z31NeTIB4YfYuCzo/ujg=="
         crossorigin="anonymous"
         referrerpolicy="no-referrer"
     />
@@ -112,24 +153,23 @@
 
     <hr>
 
-    <div class="container mt-4 bg-light p-4 rounded shadow text-center">
+    <div class="container text-center">
 
         <div class="mb-4">
-            <img src="img/2.png"
-                 alt="Prácticas Seguras de Conducción - Rinoceronte"
-                 class="img-fluid rounded shadow">
+            <img src="img/2.png" alt="Prácticas Seguras de Conducción"
+                 style="max-width:100%; border-radius:8px;">
         </div>
 
-        <h2 class="text-primary">1. Usa casco certificado</h2>
+        <h2>1. Usa casco certificado</h2>
         <p>Siempre utiliza cascos con certificación DOT, ECE o Snell.</p>
 
-        <h2 class="text-primary">2. Mantén una velocidad segura</h2>
+        <h2>2. Mantén una velocidad segura</h2>
         <p>Evita excesos de velocidad y ajusta tu manejo a las condiciones del camino.</p>
 
-        <h2 class="text-primary">3. Revisa tu motocicleta</h2>
+        <h2>3. Revisa tu motocicleta</h2>
         <p>Antes de salir, revisa frenos, llantas, luces y niveles de aceite.</p>
 
-        <h2 class="text-primary">4. Lleva equipo de protección</h2>
+        <h2>4. Lleva equipo de protección</h2>
         <ul>
             <li>Guantes</li>
             <li>Chaqueta con protecciones</li>
@@ -138,6 +178,23 @@
         </ul>
 
     </div>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="Logo CBTis">
+        </div>
+
+        <div class="footer-contact">
+            <p><i class="fa fa-school"></i> CBTis 217</p>
+            <p><i class="fa fa-user"></i> Proyecto escolar</p>
+        </div>
+
+        <div class="footer-links">
+            <strong>Síguenos</strong><br>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
 
 </div>
 
