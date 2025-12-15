@@ -76,56 +76,7 @@
 
         ul {
             text-align: center;
-<<<<<<< HEAD
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        
-        footer {
-            background-color: #5b1a2e;
-            color: white;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 30px 20px;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .footer-logo img {
-            width: 120px;
-            height: auto;
-            object-fit: contain;
-        }
-
-        .footer-contact, .footer-links {
-            max-width: 300px;
-            font-size: 14px;
-            line-height: 1.5;
-        }
-
-        .footer-contact i, .footer-links i {
-            margin-right: 8px;
-        }
-
-        .footer-links strong {
-            display: block;
-            margin-bottom: 10px;   
-        }
-
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 22px;
-            vertical-align: middle;
-        }
-
-        .footer-links a:hover {
-            color: #d6c9b8;
-=======
             list-style-position: inside;
->>>>>>> 98c51c6deeae6a351ea065cbbbaaea7f21eeff07
         }
     </style>
 

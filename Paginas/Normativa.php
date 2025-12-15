@@ -1,9 +1,7 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Presentación</title>
-
+    <title>Normativa y Reglamento Vial</title>
     <style>
         body {
             background-color: #ffffff;
@@ -73,6 +71,7 @@
             margin-top: 20px;
         }
 
+        
         footer {
             background-color: #5b1a2e;
             color: white;
@@ -116,7 +115,7 @@
             color: #d6c9b8;
         }
     </style>
-
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -125,7 +124,6 @@
       referrerpolicy="no-referrer"
     />
 </head>
-
 <body>
 
     <div class="banner">
@@ -134,50 +132,58 @@
     </div>
 
     <nav>
-        <a href="principal.html">Inicio</a>
-        <a href="practicas.html">Prácticas Seguras de Conducción</a>
+        <a href="principal.php">Inicio</a>
+        <a href="practicas.php">Prácticas Seguras de Conducción</a>
         <a href="Cascos.php">Tipos de Cascos</a>
-        <a href="Normativa.html">Normativa y Reglamento Vial</a>
+        <a href="Normativa.php">Normativa y Reglamento Vial</a>
         <a href="Accidentes.php">Accidentes en Motocicleta</a>
-        <a href="faq.html">Preguntas Frecuentes</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="faq.php">Preguntas Frecuentes</a>
+        <a href="contacto.php">Contacto</a>
         <a href="loginp.php">Login</a>
         <a href="registrousuarios.php">Registro de Usuarios</a>
     </nav>
 
-    <hr>
+    <div class="contenido">
+        <h1>Normativa y Reglamento Vial para Motociclistas</h1>
 
-    <section style="max-width: 900px; margin: auto; font-family: Arial, sans-serif; line-height: 1.6; background-color: beige;">
-
-        <h2 style="text-align: center; font-size: 28px; margin-bottom: 10px;">Presentación</h2>
-        <p style="font-size: 17px; text-align: justify;">
-            Somos el equipo conformado por <strong>Diego Javier Fuentes Pérez</strong>, 
-            <strong>José Miguel Camarena Ramírez</strong>, 
-            <strong>Kevin Daniel Pérez Vázquez</strong>, 
-            <strong>José Julián García Martínez</strong> y 
-            <strong>Kevin Gael López Moreno</strong>. 
-            Unimos esfuerzos, ideas y habilidades para desarrollar este proyecto con compromiso y creatividad.
+        <p>
+            Conducir una motocicleta con responsabilidad implica respetar la normativa vial.
+            Aquí encontrarás las reglas esenciales que te ayudarán a mantenerte seguro.
         </p>
 
-        <h2 style="text-align: center; font-size: 28px; margin-top: 25px;">Mensaje Principal</h2>
-        <p style="font-size: 17px; text-align: justify;">
-            Este proyecto está creado para promover la conducción segura, 
-            el uso adecuado del equipo de protección y la normativa vial. 
-            Nuestro objetivo es brindar información clara y útil que contribuya a una conducción responsable
-            y a la prevención de accidentes.
-        </p>
+        <hr>
 
-        <h2 style="text-align: center; font-size: 28px; margin-top: 25px;">Objetivo</h2>
-        <p style="font-size: 17px; text-align: justify;">
-            Fomentar el conocimiento y la conciencia vial mediante recursos informativos, 
-            ejemplos prácticos y recomendaciones accesibles, 
-            contribuyendo así a una mejor seguridad al conducir motocicleta.
-        </p>
+        <h2>Reglas Básicas Obligatorias</h2>
 
-    </section>
+        <p>Uso obligatorio del casco: Todo conductor y pasajero debe usar casco certificado en todo momento.</p>
+
+        <p>Documentación vigente: Es obligatorio portar licencia, tarjeta de circulación y seguro vehicular.</p>
+
+        <p>Velocidad segura: Respeta los límites de velocidad establecidos en zona urbana y carretera.</p>
+
+        <h2>Normas de Circulación</h2>
+
+        <p>Respetar las señales de tránsito y semáforos.</p>
+        <p>Circular por el carril derecho cuando sea posible.</p>
+        <p>Evitar maniobras peligrosas y zigzaguear entre autos.</p>
+        <p>Usar direccionales antes de cambiar de carril.</p>
+        <p>Mantener una distancia segura entre vehículos.</p>
+
+        <h2>Sanciones Comunes</h2>
+
+        <p>No usar casco: Conducir o transportar pasajeros sin casco certificado. Sanción aproximada: $500 - $1,500 MXN.</p>
+        <p>Exceso de velocidad: Superar los límites de velocidad marcados. Sanción aproximada: $900 - $2,000 MXN.</p>
+        <p>No portar documentos: No llevar licencia o tarjeta de circulación vigente. Sanción aproximada: $700 - $1,800 MXN.</p>
+        <p>Conducción temeraria: Realizar maniobras peligrosas entre vehículos. Sanción aproximada: $1,000 - $3,000 MXN.</p>
+
+        <p class="center">
+            Recuerda: la normativa vial existe para proteger tu vida y la de los demás.
+        </p>
+    </div>
+
     <footer>
         <div class="footer-logo">
-            <img src="img/cb.jfif" alt="SEP Logo">
+            <img src="img/Sep2.png" alt="SEP Logo">
         </div>
         <div class="footer-contact">
             <p><i class="fas fa-home"></i>Av. Tecnológico s/n<br>Loma Linda, Uriangato, Gto</p>
@@ -186,8 +192,8 @@
         </div>
         <div class="footer-links">
             <p>Enlaces que pueden interesarte:</p>
-            <strong>SÍGUENOS</strong> 
-            <a href="https://www.facebook.com/cbtis217Oficial/?locale=es_LA" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
+            <strong>SÍGUENOS</strong>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
         </div>
     </footer>
 
