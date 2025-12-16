@@ -1,4 +1,11 @@
- <style>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Compromiso de Conducción Segura</title>
+    
+    <style>
         body {
             background-color: #ffffff;
             font-family: Arial, sans-serif;
@@ -53,21 +60,84 @@
             color: #fff9f9;
         }
 
-        .contenido {
+        .container {
             max-width: 800px;
-            margin: 20px auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
+            margin: 20px auto; /* Reemplaza .mt-4 con margin: 20px auto; */
+            padding: 0 15px; /* Añade un pequeño padding para móviles */
         }
-
-        p.center {
-            text-align: center;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
         
+        /* --- ESTILOS AGREGADOS PARA LAS CLASES TIPO BOOTSTRAP --- */
+        header.bg-dark {
+            background-color: #343a40 !important;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        .card {
+            border: 1px solid rgba(0,0,0,.125);
+            border-radius: 0.25rem;
+            margin-bottom: 30px; /* Reemplaza .mb-5 */
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15) !important; /* Reemplaza .shadow */
+        }
+        .card-header {
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(0,0,0,.03);
+            border-bottom: 1px solid rgba(0,0,0,.125);
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+        }
+        .card-body {
+            padding: 1.25rem;
+        }
+        .bg-primary { background-color: #007bff !important; }
+        .bg-success { background-color: #28a745 !important; }
+        .text-white { color: #fff !important; }
+        .text-center { text-align: center !important; }
+        
+        /* Formulario */
+        .mb-3 { margin-bottom: 1rem !important; }
+        .form-label { display: inline-block; margin-bottom: 0.5rem; font-weight: bold; }
+        .form-control {
+            display: block;
+            width: 95%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            color: #212529;
+            text-align: center;
+            vertical-align: middle;
+            user-select: none;
+            background-color: transparent;
+            border: 1px solid transparent;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 0.25rem;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        .btn-primary { color: #fff; background-color: #007bff; border-color: #007bff; }
+        .btn-success { color: #fff; background-color: #28a745; border-color: #28a745; }
+        .btn-primary:hover { background-color: #0056b3; border-color: #0056b3; }
+        .btn-success:hover { background-color: #1e7e34; border-color: #1e7e34; }
+
+        /* Estilos del Footer */
         footer {
             background-color: #5b1a2e;
             color: white;
@@ -77,6 +147,7 @@
             padding: 30px 20px;
             flex-wrap: wrap;
             gap: 30px;
+            margin-top: 50px; /* Asegura separación del contenido */
         }
 
         .footer-logo img {
@@ -146,7 +217,7 @@
         <p>Firma tu promesa de conducir de forma responsable</p>
     </header>
 
-    <div class="container mt-4">
+    <div class="container">
 
         <div class="card mb-5 shadow">
             <div class="card-header bg-primary text-white">
@@ -206,5 +277,9 @@
         </div>
     </div>
 
-</body>
-</html>
+    <footer>
+        <div class="footer-logo">
+            <img src="img/cb.jfif" alt="SEP Logo">
+        </div>
+        <div class="footer-contact">
+            <p><i class="fas fa-home"></i>Av. Tecnológico s/n<br>L

@@ -1,3 +1,7 @@
+ <html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página principal</title>
  <style>
         body {
             background-color: #ffffff;
@@ -168,6 +172,21 @@
         </p>
 
     </section>
-
+ <footer>
+        <div class="footer-logo">
+            <img src="img/cb.jfif" alt="SEP Logo">
+        </div>
+        <div class="footer-contact">
+            <p><i class="fas fa-home"></i> Av. Tecnológico s/n<br>Loma Linda, Uriangato, Gto</p>
+            <p><i class="fas fa-phone"></i> +52-445-458-0516</p>
+            <p><i class="fas fa-phone"></i> +52-445-458-4291</p>
+        </div>
+        <div class="footer-links">
+            <strong>SÍGUENOS</strong>
+            <a href="https://www.facebook.com/cbtis217Oficial/?locale=es_LA" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+        </div>
+    </footer>
 </body>
 </html>

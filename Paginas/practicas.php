@@ -2,9 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prácticas Seguras de Conducción</title>
-
+    <title>Prácticas seguras en conducción</title>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-p1+YzZ8mQOzUp+ElWqXAHZrLhv05H2XhvEz8n+qz9KXLv9yEO4bw3xn+ICy3TlaIW4Z31NeTIB4YfYuCzo/ujg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
     <style>
         body {
             background-color: #ffffff;
@@ -12,16 +17,9 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
         }
 
-        .page-wrapper {
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        /* BANNER */
+        /* BANNER - Ancho Completo */
         .banner {
             position: relative;
             width: 100%;
@@ -45,25 +43,26 @@
             text-shadow: 2px 2px 8px black;
         }
 
-        /* NAV */
+        /* NAV - Ancho Completo */
         nav {
             background-color: #5b1a2e;
             display: flex;
-            padding: 10px 30px;
+            /* Estos padding definen la altura y la separación lateral de los enlaces */
+            padding: 10px 30px; 
             align-items: center;
             gap: 30px;
             font-weight: 600;
-            justify-content: center;
-            flex-wrap: wrap;
+            /* Permite que la barra se vea ancha, los enlaces quedan a la izquierda del padding */
+            flex-wrap: wrap; 
         }
 
         nav a {
             color: rgb(238, 232, 232);
             text-decoration: none;
             padding: 6px 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
             border-radius: 4px;
             font-size: 16px;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         nav a:hover {
@@ -71,21 +70,35 @@
             color: #fff9f9;
         }
 
-        /* CONTENIDO */
+        /* CONTENIDO - Centrado con ancho limitado */
         .container {
             max-width: 800px;
-            margin: 30px auto;
-            background-color: beige;
-            padding: 30px;
+            margin: 30px auto; /* Centrado */
+            background-color: #f8f9fa; /* Color más neutral que 'beige' o 'white' */
+            padding: 20px;
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        ul {
+        .container h2 {
             text-align: center;
-            list-style-position: inside;
         }
 
-        /* FOOTER */
+        .container ul {
+            text-align: left;
+            margin: 0 auto;
+            display: table;
+            list-style: disc;
+        }
+        
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* FOOTER - Ancho Completo */
         footer {
             background-color: #5b1a2e;
             color: white;
@@ -95,44 +108,44 @@
             padding: 30px 20px;
             flex-wrap: wrap;
             gap: 30px;
-            margin-top: 40px;
+            width: 100%; 
+            margin-top: 50px;
         }
 
         .footer-logo img {
             width: 120px;
             height: auto;
+            object-fit: contain;
         }
 
-        .footer-contact,
-        .footer-links {
+        .footer-contact, .footer-links {
             max-width: 300px;
             font-size: 14px;
             line-height: 1.5;
+        }
+
+        .footer-contact i, .footer-links i {
+            margin-right: 8px;
+        }
+
+        .footer-links strong {
+            display: block;
+            margin-bottom: 10px;
         }
 
         .footer-links a {
             color: white;
             text-decoration: none;
             font-size: 22px;
-            margin-right: 10px;
+            vertical-align: middle;
         }
 
         .footer-links a:hover {
             color: #d6c9b8;
         }
     </style>
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    />
 </head>
-
 <body>
-
-<div class="page-wrapper">
 
     <div class="banner">
         <img src="img/ChatGPT Image Dec 5, 2025, 08_36_09 AM.png" alt="Banner del proyecto">
@@ -150,15 +163,10 @@
         <a href="loginp.php">Login</a>
         <a href="registrousuarios.php">Registro de Usuarios</a>
     </nav>
-
     <hr>
-
-    <div class="container text-center">
-
-        <div class="mb-4">
-            <img src="img/2.png" alt="Prácticas Seguras de Conducción"
-                 style="max-width:100%; border-radius:8px;">
-        </div>
+    
+    <div class="container">
+        <img src="img/2.png" class="img-fluid" alt="Prácticas Seguras">
 
         <h2>1. Usa casco certificado</h2>
         <p>Siempre utiliza cascos con certificación DOT, ECE o Snell.</p>
@@ -176,27 +184,24 @@
             <li>Rodilleras y coderas</li>
             <li>Botas altas</li>
         </ul>
-
     </div>
 
     <footer>
         <div class="footer-logo">
-            <img src="img/logo.png" alt="Logo CBTis">
+            <img src="img/cb.jfif" alt="SEP Logo">
         </div>
-
         <div class="footer-contact">
-            <p><i class="fa fa-school"></i> CBTis 217</p>
-            <p><i class="fa fa-user"></i> Proyecto escolar</p>
+            <p><i class="fas fa-home"></i> Av. Tecnológico s/n<br>Loma Linda, Uriangato, Gto</p>
+            <p><i class="fas fa-phone"></i> +52-445-458-0516</p>
+            <p><i class="fas fa-phone"></i> +52-445-458-4291</p>
         </div>
-
         <div class="footer-links">
-            <strong>Síguenos</strong><br>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+            <p>Enlaces que pueden interesarte:</p> 
+            <strong>SÍGUENOS</strong>
+            <a href="https://www.facebook.com/cbtis217Oficial/?locale=es_LA" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+            </a>
         </div>
     </footer>
-
-</div>
-
 </body>
 </html>
