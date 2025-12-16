@@ -1,24 +1,14 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prácticas Seguras de Conducción</title>
-
-    <style>
+    <title>Prácticas seguras en conducción</title>
+<style>
         body {
             background-color: #ffffff;
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .page-wrapper {
-            width: 100%;
-            max-width: 1200px;
         }
 
         .banner {
@@ -51,17 +41,15 @@
             align-items: center;
             gap: 30px;
             font-weight: 600;
-            justify-content: center;
-            flex-wrap: wrap;
         }
 
         nav a {
             color: rgb(238, 232, 232);
             text-decoration: none;
             padding: 6px 8px;
+            transition: background-color 0.3s ease, color 0.3s ease;
             border-radius: 4px;
             font-size: 16px;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         nav a:hover {
@@ -69,29 +57,74 @@
             color: #fff9f9;
         }
 
-        .container {
+        .contenido {
             max-width: 800px;
-            margin: 30px auto;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
         }
 
-        ul {
+        p.center {
             text-align: center;
-            list-style-position: inside;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        
+        footer {
+            background-color: #5b1a2e;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 30px 20px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .footer-logo img {
+            width: 120px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .footer-contact, .footer-links {
+            max-width: 300px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .footer-contact i, .footer-links i {
+            margin-right: 8px;
+        }
+
+        .footer-links strong {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            vertical-align: middle;
+        }
+
+        .footer-links a:hover {
+            color: #d6c9b8;
         }
     </style>
-
+    
     <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-p1+YzZ8mQOzUp+ElWqXAHZrLhv05H2XhvEz8n+qz9KXLv9yEO4bw3xn+ICy3TlaIW4Z31NeTIB4YfYuCzo/ujg=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p1+YzZ8mQOzUp+ElWqXAHZrLhv05H2XhvEz8n+qz9KXLv9yEO4bw3xn+ICy3TlaIW4Z31NeTIB4YfYuCzo/ujg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 </head>
-
 <body>
-
-<div class="page-wrapper">
 
     <div class="banner">
         <img src="img/ChatGPT Image Dec 5, 2025, 08_36_09 AM.png" alt="Banner del proyecto">
@@ -109,37 +142,49 @@
         <a href="loginp.php">Login</a>
         <a href="registrousuarios.php">Registro de Usuarios</a>
     </nav>
-
     <hr>
+    <!-- CONTENIDO -->
+     <center>
+    <div class="page-wrapper">
+        <div class="container">
+            <img src="img/2.png" class="img-fluid" alt="Prácticas Seguras">
 
-    <div class="container mt-4 bg-light p-4 rounded shadow text-center">
+            <h2>1. Usa casco certificado</h2>
+            <p>Siempre utiliza cascos con certificación DOT, ECE o Snell.</p>
 
-        <div class="mb-4">
-            <img src="img/2.png"
-                 alt="Prácticas Seguras de Conducción - Rinoceronte"
-                 class="img-fluid rounded shadow">
+            <h2>2. Mantén una velocidad segura</h2>
+            <p>Evita excesos de velocidad y ajusta tu manejo a las condiciones del camino.</p>
+
+            <h2>3. Revisa tu motocicleta</h2>
+            <p>Antes de salir, revisa frenos, llantas, luces y niveles de aceite.</p>
+
+            <h2>4. Lleva equipo de protección</h2>
+            <ul>
+                <li>Guantes</li>
+                <li>Chaqueta con protecciones</li>
+                <li>Rodilleras y coderas</li>
+                <li>Botas altas</li>
+            </ul>
         </div>
-
-        <h2 class="text-primary">1. Usa casco certificado</h2>
-        <p>Siempre utiliza cascos con certificación DOT, ECE o Snell.</p>
-
-        <h2 class="text-primary">2. Mantén una velocidad segura</h2>
-        <p>Evita excesos de velocidad y ajusta tu manejo a las condiciones del camino.</p>
-
-        <h2 class="text-primary">3. Revisa tu motocicleta</h2>
-        <p>Antes de salir, revisa frenos, llantas, luces y niveles de aceite.</p>
-
-        <h2 class="text-primary">4. Lleva equipo de protección</h2>
-        <ul>
-            <li>Guantes</li>
-            <li>Chaqueta con protecciones</li>
-            <li>Rodilleras y coderas</li>
-            <li>Botas altas</li>
-        </ul>
-
     </div>
-
-</div>
+</center>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">
+            <img src="img/cb.jfif" alt="SEP Logo">
+        </div>
+        <div class="footer-contact">
+            <p><i class="fas fa-home"></i> Av. Tecnológico s/n<br>Loma Linda, Uriangato, Gto</p>
+            <p><i class="fas fa-phone"></i> +52-445-458-0516</p>
+            <p><i class="fas fa-phone"></i> +52-445-458-4291</p>
+        </div>
+        <div class="footer-links">
+            <strong>SÍGUENOS</strong>
+            <a href="https://www.facebook.com/cbtis217Oficial/?locale=es_LA" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+        </div>
+    </footer>
 
 </body>
 </html>

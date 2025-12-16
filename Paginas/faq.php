@@ -37,6 +37,7 @@
             text-shadow: 2px 2px 8px black;
         }
 
+        /* ESTILOS DE NAVEGACIÓN COPIADOS DEL PRIMER CÓDIGO */
         nav {
             background-color: #5b1a2e;
             display: flex;
@@ -44,7 +45,6 @@
             align-items: center;
             gap: 30px;
             font-weight: 600;
-            flex-wrap: wrap;
         }
 
         nav a {
@@ -60,6 +60,7 @@
             background-color: #7d2b44;
             color: #fff9f9;
         }
+        /* FIN DE ESTILOS DE NAVEGACIÓN */
 
         .contenido {
             max-width: 900px;
@@ -141,17 +142,16 @@
     </div>
 
     <nav>
-        <a href="principal.html">Inicio</a>
-        <a href="practicas.php">Prácticas Seguras</a>
+        <a href="principal.php">Inicio</a>
+        <a href="practicas.php">Prácticas Seguras de Conducción</a>
         <a href="Cascos.php">Tipos de Cascos</a>
-        <a href="Normativa.php">Normativa Vial</a>
-        <a href="Accidentes.php">Accidentes</a>
-        <a href="faq.php">FAQ</a>
+        <a href="Normativa.php">Normativa y Reglamento Vial</a>
+        <a href="Accidentes.php">Accidentes en Motocicleta</a>
+        <a href="faq.php">Preguntas Frecuentes</a>
         <a href="contacto.php">Contacto</a>
         <a href="loginp.php">Login</a>
-        <a href="registrousuarios.php">Registro</a>
+        <a href="registrousuarios.php">Registro de Usuarios</a>
     </nav>
-
     <hr>
 
     <div class="contenido">
@@ -206,8 +206,6 @@
             <p>Depende del uso, pero se recomienda revisión periódica cada 3 a 6 meses.</p>
         </div>
 
-        
-
     </div>
 
     <footer>
@@ -221,7 +219,7 @@
         </div>
         <div class="footer-links">
             <p>Enlaces que pueden interesarte:</p>
-            <strong>SÍGUENOS</strong>   
+            <strong>SÍGUENOS</strong>   
             <a href="https://www.facebook.com/cbtis217Oficial/?locale=es_LA" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
         </div>
     </footer>
