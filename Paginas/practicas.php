@@ -1,8 +1,16 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <title>Prácticas seguras en conducción</title>
-<style>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-p1+YzZ8mQOzUp+ElWqXAHZrLhv05H2XhvEz8n+qz9KXLv9yEO4bw3xn+ICy3TlaIW4Z31NeTIB4YfYuCzo/ujg=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <style>
         body {
             background-color: #ffffff;
             font-family: Arial, sans-serif;
@@ -11,6 +19,7 @@
             padding: 0;
         }
 
+        /* BANNER - Ancho Completo */
         .banner {
             position: relative;
             width: 100%;
@@ -34,13 +43,17 @@
             text-shadow: 2px 2px 8px black;
         }
 
+        /* NAV - Ancho Completo */
         nav {
             background-color: #5b1a2e;
             display: flex;
-            padding: 10px 30px;
+            /* Estos padding definen la altura y la separación lateral de los enlaces */
+            padding: 10px 30px; 
             align-items: center;
             gap: 30px;
             font-weight: 600;
+            /* Permite que la barra se vea ancha, los enlaces quedan a la izquierda del padding */
+            flex-wrap: wrap; 
         }
 
         nav a {
@@ -57,21 +70,35 @@
             color: #fff9f9;
         }
 
-        .contenido {
+        /* CONTENIDO - Centrado con ancho limitado */
+        .container {
             max-width: 800px;
-            margin: 20px auto;
-            background-color: white;
+            margin: 30px auto; /* Centrado */
+            background-color: #f8f9fa; /* Color más neutral que 'beige' o 'white' */
             padding: 20px;
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        p.center {
+        .container h2 {
             text-align: center;
-            font-weight: bold;
-            margin-top: 20px;
         }
 
+        .container ul {
+            text-align: left;
+            margin: 0 auto;
+            display: table;
+            list-style: disc;
+        }
         
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* FOOTER - Ancho Completo */
         footer {
             background-color: #5b1a2e;
             color: white;
@@ -81,6 +108,8 @@
             padding: 30px 20px;
             flex-wrap: wrap;
             gap: 30px;
+            width: 100%; 
+            margin-top: 50px;
         }
 
         .footer-logo img {
@@ -115,14 +144,6 @@
             color: #d6c9b8;
         }
     </style>
-    
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-p1+YzZ8mQOzUp+ElWqXAHZrLhv05H2XhvEz8n+qz9KXLv9yEO4bw3xn+ICy3TlaIW4Z31NeTIB4YfYuCzo/ujg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 </head>
 <body>
 
@@ -143,32 +164,28 @@
         <a href="registrousuarios.php">Registro de Usuarios</a>
     </nav>
     <hr>
-    <!-- CONTENIDO -->
-     <center>
-    <div class="page-wrapper">
-        <div class="container">
-            <img src="img/2.png" class="img-fluid" alt="Prácticas Seguras">
+    
+    <div class="container">
+        <img src="img/2.png" class="img-fluid" alt="Prácticas Seguras">
 
-            <h2>1. Usa casco certificado</h2>
-            <p>Siempre utiliza cascos con certificación DOT, ECE o Snell.</p>
+        <h2>1. Usa casco certificado</h2>
+        <p>Siempre utiliza cascos con certificación DOT, ECE o Snell.</p>
 
-            <h2>2. Mantén una velocidad segura</h2>
-            <p>Evita excesos de velocidad y ajusta tu manejo a las condiciones del camino.</p>
+        <h2>2. Mantén una velocidad segura</h2>
+        <p>Evita excesos de velocidad y ajusta tu manejo a las condiciones del camino.</p>
 
-            <h2>3. Revisa tu motocicleta</h2>
-            <p>Antes de salir, revisa frenos, llantas, luces y niveles de aceite.</p>
+        <h2>3. Revisa tu motocicleta</h2>
+        <p>Antes de salir, revisa frenos, llantas, luces y niveles de aceite.</p>
 
-            <h2>4. Lleva equipo de protección</h2>
-            <ul>
-                <li>Guantes</li>
-                <li>Chaqueta con protecciones</li>
-                <li>Rodilleras y coderas</li>
-                <li>Botas altas</li>
-            </ul>
-        </div>
+        <h2>4. Lleva equipo de protección</h2>
+        <ul>
+            <li>Guantes</li>
+            <li>Chaqueta con protecciones</li>
+            <li>Rodilleras y coderas</li>
+            <li>Botas altas</li>
+        </ul>
     </div>
-</center>
-    <!-- FOOTER -->
+
     <footer>
         <div class="footer-logo">
             <img src="img/cb.jfif" alt="SEP Logo">
@@ -179,12 +196,12 @@
             <p><i class="fas fa-phone"></i> +52-445-458-4291</p>
         </div>
         <div class="footer-links">
+            <p>Enlaces que pueden interesarte:</p> 
             <strong>SÍGUENOS</strong>
             <a href="https://www.facebook.com/cbtis217Oficial/?locale=es_LA" target="_blank">
                 <i class="fab fa-facebook-square"></i>
             </a>
         </div>
     </footer>
-
 </body>
 </html>
