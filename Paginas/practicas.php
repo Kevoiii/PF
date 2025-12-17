@@ -1,15 +1,7 @@
-<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Prácticas seguras en conducción</title>
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-p1+YzZ8mQOzUp+ElWqXAHZrLhv05H2XhvEz8n+qz9KXLv9yEO4bw3xn+ICy3TlaIW4Z31NeTIB4YfYuCzo/ujg=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    />
+    <title>Normativa y Reglamento Vial</title>
     <style>
         body {
             background-color: #ffffff;
@@ -19,7 +11,6 @@
             padding: 0;
         }
 
-        /* BANNER - Ancho Completo */
         .banner {
             position: relative;
             width: 100%;
@@ -43,17 +34,13 @@
             text-shadow: 2px 2px 8px black;
         }
 
-        /* NAV - Ancho Completo */
         nav {
             background-color: #5b1a2e;
             display: flex;
-            /* Estos padding definen la altura y la separación lateral de los enlaces */
-            padding: 10px 30px; 
+            padding: 10px 30px;
             align-items: center;
             gap: 30px;
             font-weight: 600;
-            /* Permite que la barra se vea ancha, los enlaces quedan a la izquierda del padding */
-            flex-wrap: wrap; 
         }
 
         nav a {
@@ -70,35 +57,21 @@
             color: #fff9f9;
         }
 
-        /* CONTENIDO - Centrado con ancho limitado */
-        .container {
+        .contenido {
             max-width: 800px;
-            margin: 30px auto; /* Centrado */
-            background-color: #f8f9fa; /* Color más neutral que 'beige' o 'white' */
+            margin: 20px auto;
+            background-color: white;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
-        .container h2 {
+        p.center {
             text-align: center;
+            font-weight: bold;
+            margin-top: 20px;
         }
 
-        .container ul {
-            text-align: left;
-            margin: 0 auto;
-            display: table;
-            list-style: disc;
-        }
         
-        .img-fluid {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        /* FOOTER - Ancho Completo */
         footer {
             background-color: #5b1a2e;
             color: white;
@@ -108,8 +81,6 @@
             padding: 30px 20px;
             flex-wrap: wrap;
             gap: 30px;
-            width: 100%; 
-            margin-top: 50px;
         }
 
         .footer-logo img {
@@ -144,6 +115,14 @@
             color: #d6c9b8;
         }
     </style>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p1+YzZ8mQOzUp+ElWqXAHZrLhv05H2XhvEz8n+qz9KXLv9yEO4bw3xn+ICy3TlaIW4Z31NeTIB4YfYuCzo/ujg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 <body>
 
@@ -163,7 +142,7 @@
         <a href="loginp.php">Login</a>
         <a href="registrousuarios.php">Registro de Usuarios</a>
     </nav>
-    <hr>
+<center>
     
     <div class="container">
         <img src="img/2.png" class="img-fluid" alt="Prácticas Seguras">

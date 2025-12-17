@@ -1,19 +1,43 @@
+<?php
+$host = "localhost";
+$usuario_db = "root";
+$clave = "";
+$base = "bdproyect"; 
+
+$conexion = new mysqli($host, $usuario_db, $clave, $base);
+if ($conexion->connect_error) {
+    // Manejo de error de conexión (línea 180 corregida)
+    die("Error de conexión a la base de datos: " . $conexion->connect_error); 
+}
+$conexion->set_charset("utf8");
+
+/* ===== CONSULTA DE PREGUNTAS FRECUENTES (FAQ) ===== */
+$sql = "SELECT pregunta, respuesta FROM preguntas_frecuentes ORDER BY id ASC"; 
+$resultado = $conexion->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preguntas Frecuentes</title>
-
+    <title>Preguntas Frecuentes - CBTis 217</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p1+YzZ8mQOzUp+ElWqXAHZrLhv05H2XhvEz8n+qz9KXLv9yEO4bw3xn+ICy3TlaIW4Z31NeTIB4YfYuCzo/ujg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
         body {
-            background-color: #ffffff;
+            background-color: #f8f9fa; /* Fondo general más claro */
             font-family: Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
         }
 
+        /* BANNER */
         .banner {
             position: relative;
             width: 100%;
@@ -37,7 +61,7 @@
             text-shadow: 2px 2px 8px black;
         }
 
-        /* ESTILOS DE NAVEGACIÓN COPIADOS DEL PRIMER CÓDIGO */
+        /* NAV - ESTILO RESTAURADO (Bloques multi-línea) */
         nav {
             background-color: #5b1a2e;
             display: flex;
@@ -60,37 +84,54 @@
             background-color: #7d2b44;
             color: #fff9f9;
         }
-        /* FIN DE ESTILOS DE NAVEGACIÓN */
-
+        
+        /* CONTENIDO PRINCIPAL Y FAQ STYLING (Se mantiene el estilo que agregué) */
         .contenido {
-            max-width: 900px;
+            max-width: 850px; 
             margin: 30px auto;
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .contenido h1 {
+            text-align: center;
+            color: #5b1a2e; 
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            border-bottom: 3px solid #7d2b44;
+            padding-bottom: 10px;
         }
 
         .faq-item {
-            background-color: #f7f7f7;
-            border-left: 6px solid #5b1a2e;
-            padding: 18px 22px;
-            margin-bottom: 22px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .faq-item h2 {
+            font-size: 1.2em;
+            color: #7d2b44; 
             margin-top: 0;
-            color: #5b1a2e;
-            font-size: 20px;
+            margin-bottom: 10px;
+            cursor: pointer; 
+            padding-left: 5px;
         }
 
         .faq-item p {
-            margin-bottom: 0;
+            font-size: 1em;
             color: #333;
-            font-size: 15px;
+            margin-bottom: 0;
+            padding: 5px 0 0 5px;
+            border-top: 1px dashed #eee; 
+            padding-top: 10px;
         }
-
+        
+        /* FOOTER */
         footer {
             background-color: #5b1a2e;
             color: white;
@@ -100,10 +141,14 @@
             padding: 30px 20px;
             flex-wrap: wrap;
             gap: 30px;
+            width: 100%; 
+            margin-top: 50px;
         }
 
         .footer-logo img {
             width: 120px;
+            height: auto;
+            object-fit: contain;
         }
 
         .footer-contact, .footer-links {
@@ -112,99 +157,66 @@
             line-height: 1.5;
         }
 
+        .footer-contact i, .footer-links i {
+            margin-right: 8px;
+        }
+
+        .footer-links strong {
+            display: block;
+            margin-bottom: 10px;
+        }
+
         .footer-links a {
             color: white;
             text-decoration: none;
-            font-size: 16px;
-            display: block;
-            margin-top: 5px;
+            font-size: 22px;
+            vertical-align: middle;
         }
 
         .footer-links a:hover {
             color: #d6c9b8;
         }
     </style>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-p1+YzZ8mQOzUp+ElWqXAHZrLhv05H2XhvEz8n+qz9KXLv9yEO4bw3xn+ICy3TlaIW4Z31NeTIB4YfYuCzo/ujg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 </head>
-
 <body>
 
     <div class="banner">
-        <img src="img/ChatGPT Image Dec 5, 2025, 08_36_09 AM.png" alt="Banner">
-        <div class="banner-text">Preguntas Frecuentes</div>
+        <img src="img/ChatGPT Image Dec 5, 2025, 08_36_09 AM.png" alt="Banner del proyecto">
+        <div class="banner-text">CBTis 217</div>
     </div>
 
     <nav>
         <a href="principal.php">Inicio</a>
-        <a href="practicas.php">Prácticas Seguras de Conducción</a>
-        <a href="Cascos.php">Tipos de Cascos</a>
-        <a href="Normativa.php">Normativa y Reglamento Vial</a>
-        <a href="Accidentes.php">Accidentes en Motocicleta</a>
-        <a href="faq.php">Preguntas Frecuentes</a>
+        <a href="practicas.php">Prácticas Seguras <br> de Conducción</a>
+        <a href="Cascos.php">Tipos de <br> Cascos</a>
+        <a href="Normativa.php">Normativa y <br> Reglamento Vial</a>
+        <a href="Accidentes.php">Accidentes en <br> Motocicleta</a>
+        <a href="faq.php">Preguntas <br> Frecuentes</a>
         <a href="contacto.php">Contacto</a>
         <a href="loginp.php">Login</a>
-        <a href="registrousuarios.php">Registro de Usuarios</a>
+        <a href="registrousuarios.php">Registro de <br> Usuarios</a>
     </nav>
-    <hr>
+
 
     <div class="contenido">
-
-        <div class="faq-item">
-            <h2>1. ¿Es obligatorio usar casco?</h2>
-            <p>Sí, el uso del casco es obligatorio y reduce considerablemente el riesgo de lesiones graves.</p>
-        </div>
-
-        <div class="faq-item">
-            <h2>2. ¿Qué tipo de casco es más seguro?</h2>
-            <p>El casco integral es el más seguro, ya que protege completamente la cabeza y el rostro.</p>
-        </div>
-
-        <div class="faq-item">
-            <h2>3. ¿Por qué ocurren tantos accidentes en motocicleta?</h2>
-            <p>Principalmente por exceso de velocidad, distracciones y falta de equipo de protección.</p>
-        </div>
-
-        <div class="faq-item">
-            <h2>4. ¿Es obligatorio usar equipo de protección?</h2>
-            <p>Guantes, chaqueta, botas y protecciones reducen lesiones y pueden salvar vidas.</p>
-        </div>
-
-        <div class="faq-item">
-            <h2>5. ¿Qué debo revisar antes de conducir?</h2>
-            <p>Frenos, luces, llantas, espejos y niveles de aceite.</p>
-        </div>
-
-        <div class="faq-item">
-            <h2>6. ¿Es peligroso conducir bajo la lluvia?</h2>
-            <p>Sí, el pavimento se vuelve resbaloso. Reduce la velocidad y mantén distancia.</p>
-        </div>
-
-        <div class="faq-item">
-            <h2>7. ¿Qué hacer en caso de accidente?</h2>
-            <p>Detente, revisa lesiones y llama a los servicios de emergencia.</p>
-        </div>
-
-        <div class="faq-item">
-            <h2>8. ¿Puedo llevar acompañante?</h2>
-            <p>Sí, siempre que la motocicleta esté diseñada para ello y ambos usen casco.</p>
-        </div>
-
-        <div class="faq-item">
-            <h2>9. ¿Conducir cansado es peligroso?</h2>
-            <p>Sí, disminuye la concentración y el tiempo de reacción.</p>
-        </div>
-
-        <div class="faq-item">
-            <h2>10. ¿Cada cuánto debo darle mantenimiento a mi moto?</h2>
-            <p>Depende del uso, pero se recomienda revisión periódica cada 3 a 6 meses.</p>
-        </div>
+        <h1>Preguntas Frecuentes (FAQ)</h1>
+        
+        <?php
+        if ($resultado->num_rows > 0) {
+            $contador = 1;
+            while ($fila = $resultado->fetch_assoc()) {
+                // Generación dinámica de los ítems del FAQ desde la BD
+                echo "<div class='faq-item'>";
+                echo "<h2>{$contador}. " . htmlspecialchars($fila['pregunta']) . "</h2>";
+                echo "<p>" . nl2br(htmlspecialchars($fila['respuesta'])) . "</p>";
+                echo "</div>";
+                $contador++;
+            }
+        } else {
+            echo "<p>No hay preguntas frecuentes registradas en la base de datos.</p>";
+        }
+        $conexion->close();
+        ?>
 
     </div>
 
@@ -219,7 +231,7 @@
         </div>
         <div class="footer-links">
             <p>Enlaces que pueden interesarte:</p>
-            <strong>SÍGUENOS</strong>   
+            <strong>SÍGUENOS</strong>    
             <a href="https://www.facebook.com/cbtis217Oficial/?locale=es_LA" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
         </div>
     </footer>
