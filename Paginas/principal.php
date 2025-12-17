@@ -1,8 +1,8 @@
- <html lang="es">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Página principal</title>
- <style>
+    <title>Normativa y Reglamento Vial</title>
+    <style>
         body {
             background-color: #ffffff;
             font-family: Arial, sans-serif;
@@ -142,7 +142,6 @@
         <a href="loginp.php">Login</a>
         <a href="registrousuarios.php">Registro de Usuarios</a>
     </nav>
-    <hr>
 
     <section style="max-width: 900px; margin: auto; font-family: Arial, sans-serif; line-height: 1.6; background-color: beige;">
 
